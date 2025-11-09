@@ -11,7 +11,7 @@ SessionLive::SessionLive() {
     _SessionManager = SessionManager::get_instance();
 
 	//_SendResponse = std::make_shared<SendResponse>();
-	_ClientShutdown = std::make_shared<СlientShutdown>();
+	_ClientShutdown = std::make_shared<ClientShutdown>();
 }
 
 void SessionLive::checkActivity() {
@@ -27,9 +27,9 @@ void SessionLive::checkActivity() {
                 _SessionManager->removeClientFromTable(UID);
 
                 _ClientShutdown->disconnectClientByReason(
-                    UID, 
-                    "the last session activity was more than" + _Config->configuration_vars_["sessionLiveTime"] + " minutes ago", 
-                    0, 
+                    UID,
+                    "the last session activity was more than" + _Config->configuration_vars_["sessionLiveTime"] + " minutes ago",
+                    0,
                     _ClientShutdown->inactive
                 );
             }
