@@ -8,7 +8,7 @@
 #include <memory>
 #include <chrono>
 
-class СlientShutdown;
+class ClientShutdown;
 //class SendResponse;
 
 class SessionLive {
@@ -18,7 +18,7 @@ private:
 	SessionManager* _SessionManager;
 
 	//std::shared_ptr<SendResponse> _SendResponse;
-	std::shared_ptr<СlientShutdown> _ClientShutdown;
+	std::shared_ptr<ClientShutdown> _ClientShutdown;
 
 	const std::string MODULE_NAME_ = "(SessionLive)";
 public:
@@ -29,4 +29,4 @@ public:
 	// void checkClientSessionStatus(); // check client is live now or no
 };
 
-#endif 
+#endif
